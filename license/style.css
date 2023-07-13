@@ -1,11 +1,40 @@
 /* styles.css */
 
 /* Reset default browser styles */
-body, h1, h2, p, ul {
+body, h2, p, ul {
     /* margin: 12px; */
     padding: 0;
   }
-  .logo{
+  body, html {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Navbar styles */
+  .navbar {
+    background-color: #f2f2f2;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar .logo {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: #333;
+    margin-right: 10px;
+  }
+
+  .navbar .logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+  }
+
+
+  /* .logo{
     width: 20px;
     height: 20px;
     background-image: url('./000.jpg');
@@ -16,17 +45,16 @@ body, h1, h2, p, ul {
     padding: 20px;    
     border-bottom: 1px solid black;
     margin-bottom: 2px;
-  }
+  } */
   
   /* Header */
   header {
-    background-color: #4aa8b3;;
-    padding: 80px;
-    display: flex;
+    /* background-color: #f2f2f2; */
+    padding: 40px;
     text-align: center;
   }
   header h1{
-    margin-left: 200px;
+    margin-left: -40px;
   }
   
   
@@ -124,7 +152,7 @@ body, h1, h2, p, ul {
   footer p {
     margin-bottom: 0;
   }
-.button {
+  .button {
     display: inline-block;
     padding: 10px 20px;
     background-color:#4aa8b3;
@@ -150,6 +178,17 @@ body, h1, h2, p, ul {
   }
   
   @media screen and (max-width: 600px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .navbar .logo {
+      margin-bottom: 10px;
+      width: 40px;
+      height: 40px;
+    }
+    
     section{
     margin-left: 0;
     margin-right: 0;
@@ -160,6 +199,7 @@ body, h1, h2, p, ul {
     }
     header h1{
       margin-left: 12px;
+      font-size: 28px;
     }
     html{
       margin: 0;
